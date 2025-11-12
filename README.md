@@ -1,11 +1,16 @@
-# ExamPortal - Professional Online Examination System
+# 🎓 Exam Portal 2025
 
-A comprehensive online examination platform built with Spring Boot 3.x backend and React frontend, featuring secure authentication, real-time exam management, and detailed analytics.
+A comprehensive online examination system built with **Spring Boot** (Backend) and **React** (Frontend). This system provides secure exam management, student assessment, and administrative controls with advanced security features.
 
-## 🚀 Features
+## ✨ Features
 
-### For Students
-- **Secure Registration & Login** with JWT authentication
+### 👨‍💼 Admin Features
+- **Dashboard Analytics**: Real-time statistics and recent activity tracking
+- **Exam Management**: Create, edit, and manage exams with categories
+- **Question Management**: Add questions manually or via Excel bulk upload
+- **Student Management**: Monitor student registrations and performance
+- **Results Analytics**: Comprehensive exam results and student performance analysis
+- **Category Management**: Organize exams by categories
 - **Interactive Exam Interface** with timer and question navigation
 - **Real-time Answer Submission** with auto-save functionality
 - **Instant Results** with detailed performance analytics
