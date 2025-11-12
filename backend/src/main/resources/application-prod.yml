@@ -8,7 +8,9 @@ spring:
     name: exam-portal-backend
   
   datasource:
-    url: ${DATABASE_URL}
+    url: ${DATABASE_URL:${MYSQL_URL:jdbc:mysql://localhost:3306/exam_portal}}
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
   
   jpa:
