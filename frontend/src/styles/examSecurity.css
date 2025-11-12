@@ -1,0 +1,150 @@
+/* Exam Security Styles - Prevent copying and text selection */
+
+/* Disable text selection globally during exam */
+.exam-secure {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Disable text selection on specific elements */
+.no-select {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Prevent drag and drop */
+.no-drag {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+}
+
+/* Hide text cursor on non-interactive elements */
+.no-cursor {
+  cursor: default !important;
+}
+
+/* Disable highlighting */
+.no-highlight {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Prevent image saving */
+.secure-image {
+  pointer-events: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+}
+
+/* Disable context menu on specific elements */
+.no-context-menu {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Question text specific protection */
+.question-text {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* Option text specific protection */
+.option-text {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  cursor: default !important;
+}
+
+/* Disable print styles */
+@media print {
+  .exam-secure,
+  .no-select,
+  .question-text,
+  .option-text {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  body::after {
+    content: "Printing is not allowed during the exam.";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: red;
+    z-index: 9999;
+  }
+}
+
+/* Disable selection on mobile devices */
+@media (max-width: 768px) {
+  .exam-secure,
+  .no-select,
+  .question-text,
+  .option-text {
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    touch-action: manipulation !important;
+  }
+}
+
+/* Additional security for webkit browsers */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .exam-secure,
+  .no-select,
+  .question-text,
+  .option-text {
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+}
+
+/* Firefox specific */
+@-moz-document url-prefix() {
+  .exam-secure,
+  .no-select,
+  .question-text,
+  .option-text {
+    -moz-user-select: none !important;
+  }
+}
