@@ -33,9 +33,6 @@ Thumbs.db
 
 # Java/Spring Boot
 /backend/target/
-/backend/.mvn/
-/backend/mvnw
-/backend/mvnw.cmd
 *.jar
 *.war
 *.ear
