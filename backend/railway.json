@@ -4,6 +4,8 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "java -Dserver.port=$PORT -Dspring.profiles.active=prod -Dlogging.level.root=INFO -jar target/exam-portal-backend-0.0.1-SNAPSHOT.jar"
+    "startCommand": "java -Dserver.port=$PORT -Dspring.profiles.active=prod -Dlogging.level.root=WARN -jar target/exam-portal-backend-0.0.1-SNAPSHOT.jar",
+    "healthcheckPath": "",
+    "healthcheckTimeout": 0
   }
 }

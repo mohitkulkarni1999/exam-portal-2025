@@ -40,11 +40,12 @@ spring:
 
 logging:
   level:
-    com.examportal: DEBUG
+    com.examportal: INFO
     org.springframework.security: WARN
     org.springframework.web: WARN
-    org.springframework.boot.autoconfigure: DEBUG
-    com.zaxxer.hikari: DEBUG
+    org.springframework.boot.autoconfigure: WARN
+    com.zaxxer.hikari: WARN
+    root: WARN
 
 management:
   endpoints:
