@@ -1,5 +1,5 @@
 [phases.build]
-cmds = ["chmod +x ./mvnw", "./mvnw clean package -DskipTests"]
+cmds = ["mvn clean package -DskipTests"]
 
 [phases.start]
 cmd = "java -Dserver.port=$PORT -jar target/exam-portal-backend-0.0.1-SNAPSHOT.jar"
