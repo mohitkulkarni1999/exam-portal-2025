@@ -2,7 +2,8 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://exam-portal-backend-ecjt.onrender.com/api';
+// Force production backend URL
+const API_BASE_URL = 'https://exam-portal-backend-ecjt.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
