@@ -8,7 +8,9 @@ spring:
     name: exam-portal-backend
   
   datasource:
-    url: jdbc:${DATABASE_URL}
+    url: ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/exam_portal}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:password}
     driver-class-name: org.postgresql.Driver
   
   jpa:
