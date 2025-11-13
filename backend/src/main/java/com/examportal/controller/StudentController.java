@@ -31,8 +31,8 @@ public class StudentController {
             dashboard.put("availableExams", studentService.getAvailableExamsForStudent(userPrincipal.getId()));
             dashboard.put("previousResults", studentService.getStudentResults(userPrincipal.getId()));
         } else {
-            // For testing when no authentication, use student ID 1
-            dashboard.put("availableExams", studentService.getAvailableExamsForStudent(1L));
+            // For testing when no authentication, return available exams without student-specific data
+            dashboard.put("availableExams", studentService.getAvailableExams());
             dashboard.put("previousResults", List.of());
         }
         
@@ -109,8 +109,8 @@ public class StudentController {
             UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
             sessions = studentService.getStudentResults(userPrincipal.getId());
         } else {
-            // For testing when no authentication, get results for student ID 1
-            sessions = studentService.getStudentResults(1L);
+            // For testing when no authentication, return empty results
+            sessions = List.of();
         }
         
         // Convert to detailed result format
