@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/api/admin")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", maxAge = 3600)
 // @PreAuthorize("hasRole('ADMIN')") // Temporarily disabled for testing
