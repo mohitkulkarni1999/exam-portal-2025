@@ -1,0 +1,16 @@
+RENDER DEPLOYMENT VERSION 3.0
+================================
+Timestamp: 2025-11-13T11:45:00Z
+Commit: Force complete rebuild with context-path fix
+Changes:
+- Fixed context-path issue (removed /api prefix)
+- Added test endpoint for verification
+- Fixed student dashboard endpoints
+- This file forces a complete rebuild
+
+Expected URLs after deployment:
+- Test: https://exam-portal-backend-ecjt.onrender.com/api/student/test
+- Dashboard: https://exam-portal-backend-ecjt.onrender.com/api/student/dashboard
+- Results: https://exam-portal-backend-ecjt.onrender.com/api/student/results
+
+If you see this file in the deployment, the new code is active!
