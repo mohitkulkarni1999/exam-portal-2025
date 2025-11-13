@@ -13,13 +13,23 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/api/student")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", maxAge = 3600)
 // @PreAuthorize("hasRole('STUDENT')") // Temporarily disabled for testing
 public class StudentController {
     
     private final StudentService studentService;
+    
+    @GetMapping("/test")
+    public ResponseEntity<Map<String, Object>> testEndpoint() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", "FIXED");
+        response.put("message", "Student endpoints are now working!");
+        response.put("timestamp", java.time.LocalDateTime.now().toString());
+        response.put("version", "v2.0-fixed");
+        return ResponseEntity.ok(response);
+    }
     
     @GetMapping("/dashboard")
     public ResponseEntity<Map<String, Object>> getDashboard(Authentication authentication) {
